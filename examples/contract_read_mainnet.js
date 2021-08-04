@@ -8,17 +8,17 @@ const address = '0x645d521871406d97c36a0aed07c7a88d08095d35' // The BigDog TNT20
 const contract = new web3.eth.Contract(abi, address)
 
 contract.methods.totalSupply().call((err, result) => { 
-    console.log("totalSupply", result) 
+    console.log("totalSupply:", result) 
 })
 
 contract.methods.name().call((err, result) => {
-    console.log("name", result)
+    console.log("name:", result)
 })
 
 contract.methods.symbol().call((err, result) => {
-    console.log("symbol", result)
+    console.log("symbol:", result)
 })
 
 contract.methods.balanceOf('0x868a92be1fc3ea61b4e3456be4cc9c6815b643e1').call((err, result) => {
-    console.log("balance of 0x868a92be1fc3ea61b4e3456be4cc9c6815b643e1", result)
+    console.log("balance of 0x868a92be1fc3ea61b4e3456be4cc9c6815b643e1:", result)
 })
