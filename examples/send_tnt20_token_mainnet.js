@@ -12,9 +12,7 @@ const abi = [{"inputs":[{"internalType":"string","name":"name_","type":"string"}
 const contract = new web3.eth.Contract(abi, tdropContractAddress)
 
 // Create transaction
-const sendTDrop = async () => {
-   const tdropAmountInWei = "100"
-
+const sendTDrop = async(tdropAmountInWei) => {
    console.log(`Attempting to send ${tdropAmountInWei} wei of TDROP from ${senderAddr} to ${recipientAddr}`);
   
    const count = await web3.eth.getTransactionCount(senderAddr);
@@ -39,5 +37,6 @@ const sendTDrop = async () => {
    console.log("Transaction details:", JSON.stringify(createReceipt, null, "  "));
 };
 
-sendTDrop();
+const tdropAmountInWei = "100" // Sending 100 wei of TDROP (TDROP has 18 decimals)
+sendTDrop(tdropAmountInWei)
 
