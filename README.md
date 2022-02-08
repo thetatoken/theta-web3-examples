@@ -32,7 +32,7 @@ Execute the command below to install dependencies:
 npm install
 ```
 
-### Run the examples
+### Run the examples (Local privatenet)
 
 Run the following scripts to interact with the Theta local privatenet through Web3.js. Note that the chainID of the Theta local privatenet is 366. When we compose the transactions, we need to specify the chainID, otherwise the transactions will be rejected by the blockchain.
 
@@ -53,3 +53,14 @@ node examples/send_signed_transaction.js
 node examples/web3_extras.js
 ```
 
+### Run the examples (Mainnet)
+
+The two examples below how to interact with the Theta mainnet through Web3.js.
+
+```shell
+# Query the TDROP contract (TNT20 token)
+node examples/contract_read_mainnet.js
+
+# Send TDROP (TNT20 token) between two accounts. Before running the example, make sure the sender account has enough TDROP to send, and enough TFUEL as the gas fee.
+node examples/send_tnt20_token_mainnet.js
+```
