@@ -32,9 +32,11 @@ const sendTDrop = async () => {
    const createReceipt = await web3.eth.sendSignedTransaction(
       createTransaction.rawTransaction
    );
-   console.log(
-      `Transaction successful with hash: ${createReceipt.transactionHash}`
-   );
+
+   console.log("");
+   console.log("Transaction successful with hash:", createReceipt.transactionHash);
+   console.log("");
+   console.log("Transaction details:", JSON.stringify(createReceipt, null, "  "));
 };
 
 sendTDrop();
