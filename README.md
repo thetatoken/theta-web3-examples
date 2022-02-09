@@ -63,4 +63,7 @@ node examples/contract_read_mainnet.js
 
 # Send TDROP (TNT20 token) between two accounts. Before running the example, make sure the sender account has enough TDROP to send, and enough TFUEL as the gas fee.
 node examples/send_tnt20_token_mainnet.js
+
+# List all the events emitted by the TDROP contract in the specified block range
+node examples/events_filtering_mainnet.js
 ```
