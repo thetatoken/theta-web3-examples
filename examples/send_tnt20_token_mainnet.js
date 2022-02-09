@@ -3,7 +3,7 @@ const web3 = new Web3('https://eth-rpc-api.thetatoken.org/rpc')
 const chainID = 361 // for the Theta Mainnet
 
 // Variables definition
-const privKey       = '1111111111111111111111111111111111111111111111111111111111111111'
+const senderPrivKey = '1111111111111111111111111111111111111111111111111111111111111111'
 const senderAddr    = "0x19E7E376E7C213B7E7e7e46cc70A5dD086DAff2A"
 const recipientAddr = "0x1563915e194D8CfBA1943570603F7606A3115508"
 
@@ -23,7 +23,7 @@ const sendTDrop = async(tdropAmountInWei) => {
         "to": tdropContractAddress,
         "data": contract.methods.transfer(recipientAddr, tdropAmountInWei).encodeABI()
       },
-      privKey
+      senderPrivKey
    );
 
    // Deploy transaction
