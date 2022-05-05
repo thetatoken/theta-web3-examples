@@ -14,3 +14,17 @@ contract.getPastEvents("allEvents", {
    fromBlock: fromBlock, 
    toBlock: toBlock}
 ).then(console.log);
+
+// Get all the events that match a given topic from the TDROP contract in the specified block range
+const topic0 = web3.utils.keccak256("Transfer(address,address,uint256)");
+contract.getPastEvents("allEvents", {
+   topics: [topic0],
+   fromBlock: fromBlock, 
+   toBlock: toBlock}
+).then(console.log);
+
+// Get all the "Transfer" events from the TDROP contract in the specified block range
+contract.getPastEvents('Transfer', {
+   fromBlock: fromBlock, 
+   toBlock: toBlock}
+).then(console.log);
